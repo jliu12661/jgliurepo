@@ -112,7 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(621, 353);
             this.Controls.Add(this.textBox_results);
             this.Controls.Add(this.label_equals);
@@ -123,8 +123,11 @@
             this.Controls.Add(this.button_add);
             this.Controls.Add(this.textBox_input_1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.ShowIcon = false;
+            this.Text = "Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
