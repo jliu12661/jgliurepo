@@ -59,7 +59,7 @@ namespace calculators
                     break;
             }
 
-            textBox_results.Text = results.ToString();
+            textBox_results.Text = results.ToString("G5");
         }
 
     }
