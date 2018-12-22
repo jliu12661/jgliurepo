@@ -14,27 +14,29 @@ namespace calculators
             mathCore = new CalculateMathCore();
         }
 
+        enum Operation {ADD, SUBTRACT, MULTIPLY, DIVIDE}
+
         private void button_add_Click(object sender, EventArgs e)
         {
-            Calculate("Add");
+            Calculate(Operation.ADD);
         }
 
         private void button_subtract_Click(object sender, EventArgs e)
         {
-            Calculate("Subtract");
+            Calculate(Operation.SUBTRACT);
         }
 
         private void button_multiply_Click(object sender, EventArgs e)
         {
-            Calculate("Multiply");
+            Calculate(Operation.MULTIPLY);
         }
 
         private void button_divide_Click(object sender, EventArgs e)
         {
-            Calculate("Divide");
+            Calculate(Operation.DIVIDE);
         }
 
-        private void Calculate(string op)
+        private void Calculate(Operation op)
         {
             double input_1 = Double.Parse(textBox_input_1.Text);
             double input_2 = Double.Parse(textBox_input_2.Text);
@@ -42,16 +44,16 @@ namespace calculators
             double results = 0;
             switch(op)
             {
-                case "Add":
+                case Operation.ADD:
                     results = mathCore.Add(input_1, input_2);
                     break;
-                case "Subtract":
+                case Operation.SUBTRACT:
                     results = mathCore.Subtract(input_1, input_2);
                     break;
-                case "Multiply":
+                case Operation.MULTIPLY:
                     results = mathCore.Multiply(input_1, input_2);
                     break;
-                case "Divide":
+                case Operation.DIVIDE:
                     results = mathCore.Divide(input_1, input_2);
                     break;
             }
