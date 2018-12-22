@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using System;
 using System.Windows.Forms;
+using CalculateLib;
 
 namespace calculators
 {
     public partial class Form1 : Form
     {
+        CalculateMathCore mathCore;
         public Form1()
         {
             InitializeComponent();
+            mathCore = new CalculateMathCore();
         }
 
         private void button_add_Click(object sender, EventArgs e)
@@ -46,16 +43,16 @@ namespace calculators
             switch(op)
             {
                 case "Add":
-                    results = input_1 + input_2;
+                    results = mathCore.Add(input_1, input_2);
                     break;
                 case "Subtract":
-                    results = input_1 - input_2;
+                    results = mathCore.Subtract(input_1, input_2);
                     break;
                 case "Multiply":
-                    results = input_1 * input_2;
+                    results = mathCore.Multiply(input_1, input_2);
                     break;
                 case "Divide":
-                    results = input_1 / input_2;
+                    results = mathCore.Divide(input_1, input_2);
                     break;
             }
 
