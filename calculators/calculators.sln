@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "calculators", "calculators\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculateLib", "CalculateLib\CalculateLib.csproj", "{C764D1E6-7EEA-4B29-946E-E4DF1D584092}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Calculator", "WPF_Calculator\WPF_Calculator.csproj", "{75B62911-7BEC-41F2-BC68-E3A34F0AC8EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C764D1E6-7EEA-4B29-946E-E4DF1D584092}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C764D1E6-7EEA-4B29-946E-E4DF1D584092}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C764D1E6-7EEA-4B29-946E-E4DF1D584092}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75B62911-7BEC-41F2-BC68-E3A34F0AC8EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75B62911-7BEC-41F2-BC68-E3A34F0AC8EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75B62911-7BEC-41F2-BC68-E3A34F0AC8EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75B62911-7BEC-41F2-BC68-E3A34F0AC8EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
