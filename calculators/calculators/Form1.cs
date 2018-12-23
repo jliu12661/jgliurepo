@@ -14,7 +14,7 @@ namespace calculators
             mathCore = new CalculateMathCore();
         }
 
-        enum Operation {ADD, SUBTRACT, MULTIPLY, DIVIDE}
+        enum Operation {ADD, SUBTRACT, MULTIPLY, DIVIDE, POWER}
 
         private void button_add_Click(object sender, EventArgs e)
         {
@@ -34,6 +34,11 @@ namespace calculators
         private void button_divide_Click(object sender, EventArgs e)
         {
             Calculate(Operation.DIVIDE);
+        }
+
+        private void button_Power_Click(object sender, EventArgs e)
+        {
+            Calculate(Operation.POWER);
         }
 
         private void Calculate(Operation op)
@@ -56,10 +61,12 @@ namespace calculators
                 case Operation.DIVIDE:
                     results = mathCore.Divide(input_1, input_2);
                     break;
+                case Operation.POWER:
+                    results = mathCore.Power(input_1, input_2);
+                    break;
             }
 
             textBox_results.Text = results.ToString("G5");
         }
-
     }
 }

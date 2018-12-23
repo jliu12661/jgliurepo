@@ -21,5 +21,10 @@
         {
             return a / b;
         }
+
+        public double Power(double a, double b)
+        {
+            return System.Math.Pow(a, b);
+        }
     }
 }

@@ -36,6 +36,11 @@ namespace WPF_Calculator
             Calculate("Divide");
         }
 
+        private void button_Power_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate("Power");
+        }
+
         private void Calculate(string op)
         {
             double input_1 = Double.Parse(textBox_Input.Text);
@@ -55,6 +60,9 @@ namespace WPF_Calculator
                     break;
                 case "Divide":
                     results = mathCore.Divide(input_1, input_2);
+                    break;
+                case "Power":
+                    results = mathCore.Power(input_1, input_2);
                     break;
             }
 

@@ -24,6 +24,7 @@
         </TextBox>
         <Label x:Name="label_equals" Content="=" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="402,119,0,0" RenderTransformOrigin="0.504,2.366"/>
         <TextBox x:Name="textBox_results" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="452,118,0,0" RenderTransformOrigin="-0.154,1.902"/>
+        <Button x:Name="button_Power" Content="^" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="157,210,0,0" Click="button_Power_Click"/>
 
     </Grid>
 </Window>

@@ -36,6 +36,7 @@
             this.textBox_input_2 = new System.Windows.Forms.TextBox();
             this.label_equals = new System.Windows.Forms.Label();
             this.textBox_results = new System.Windows.Forms.TextBox();
+            this.button_Power = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox_input_1
@@ -108,12 +109,23 @@
             this.textBox_results.Size = new System.Drawing.Size(100, 20);
             this.textBox_results.TabIndex = 7;
             // 
+            // button_Power
+            // 
+            this.button_Power.Location = new System.Drawing.Point(147, 244);
+            this.button_Power.Name = "button_Power";
+            this.button_Power.Size = new System.Drawing.Size(75, 23);
+            this.button_Power.TabIndex = 8;
+            this.button_Power.Text = "^";
+            this.button_Power.UseVisualStyleBackColor = true;
+            this.button_Power.Click += new System.EventHandler(this.button_Power_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(621, 353);
+            this.Controls.Add(this.button_Power);
             this.Controls.Add(this.textBox_results);
             this.Controls.Add(this.label_equals);
             this.Controls.Add(this.textBox_input_2);
@@ -143,6 +155,7 @@
         private System.Windows.Forms.TextBox textBox_input_2;
         private System.Windows.Forms.Label label_equals;
         private System.Windows.Forms.TextBox textBox_results;
+        private System.Windows.Forms.Button button_Power;
     }
 }
 
