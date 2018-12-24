@@ -71,7 +71,6 @@ namespace calculators
                     break;
                 case Operation.MODULUS:
                     results = mathCore.Modulus(input_1, input_2);
-                    results = (int) (results);
                     break;
             }
 

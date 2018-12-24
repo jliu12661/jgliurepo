@@ -71,7 +71,6 @@ namespace WPF_Calculator
                     break;
                 case "Modulus":
                     results = mathCore.Modulus(input_1, input_2);
-                    results = (int) (results);
                     break;
             }
 
