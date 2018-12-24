@@ -41,6 +41,11 @@ namespace WPF_Calculator
             Calculate("Power");
         }
 
+        private void button_Modulus_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate("Modulus");
+        }
+
         private void Calculate(string op)
         {
             double input_1 = Double.Parse(textBox_Input.Text);
@@ -63,6 +68,10 @@ namespace WPF_Calculator
                     break;
                 case "Power":
                     results = mathCore.Power(input_1, input_2);
+                    break;
+                case "Modulus":
+                    results = mathCore.Modulus(input_1, input_2);
+                    results = (int) (results);
                     break;
             }
 

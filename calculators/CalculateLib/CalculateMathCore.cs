@@ -26,5 +26,10 @@
         {
             return System.Math.Pow(a, b);
         }
+
+        public double Modulus(double a, double b)
+        {
+            return a % b;
+        }
     }
 }

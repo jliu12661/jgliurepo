@@ -37,6 +37,7 @@
             this.label_equals = new System.Windows.Forms.Label();
             this.textBox_results = new System.Windows.Forms.TextBox();
             this.button_Power = new System.Windows.Forms.Button();
+            this.button_Modulus = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox_input_1
@@ -119,12 +120,23 @@
             this.button_Power.UseVisualStyleBackColor = true;
             this.button_Power.Click += new System.EventHandler(this.button_Power_Click);
             // 
+            // button_Modulus
+            // 
+            this.button_Modulus.Location = new System.Drawing.Point(147, 273);
+            this.button_Modulus.Name = "button_Modulus";
+            this.button_Modulus.Size = new System.Drawing.Size(75, 23);
+            this.button_Modulus.TabIndex = 9;
+            this.button_Modulus.Text = "%";
+            this.button_Modulus.UseVisualStyleBackColor = true;
+            this.button_Modulus.Click += new System.EventHandler(this.button_Modulus_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(621, 353);
+            this.Controls.Add(this.button_Modulus);
             this.Controls.Add(this.button_Power);
             this.Controls.Add(this.textBox_results);
             this.Controls.Add(this.label_equals);
@@ -156,6 +168,7 @@
         private System.Windows.Forms.Label label_equals;
         private System.Windows.Forms.TextBox textBox_results;
         private System.Windows.Forms.Button button_Power;
+        private System.Windows.Forms.Button button_Modulus;
     }
 }
 

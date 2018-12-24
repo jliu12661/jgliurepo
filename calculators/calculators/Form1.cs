@@ -14,7 +14,7 @@ namespace calculators
             mathCore = new CalculateMathCore();
         }
 
-        enum Operation {ADD, SUBTRACT, MULTIPLY, DIVIDE, POWER}
+        enum Operation {ADD, SUBTRACT, MULTIPLY, DIVIDE, POWER, MODULUS}
 
         private void button_add_Click(object sender, EventArgs e)
         {
@@ -41,6 +41,11 @@ namespace calculators
             Calculate(Operation.POWER);
         }
 
+        private void button_Modulus_Click(object sender, EventArgs e)
+        {
+            Calculate(Operation.MODULUS);
+        }
+
         private void Calculate(Operation op)
         {
             double input_1 = Double.Parse(textBox_input_1.Text);
@@ -63,6 +68,10 @@ namespace calculators
                     break;
                 case Operation.POWER:
                     results = mathCore.Power(input_1, input_2);
+                    break;
+                case Operation.MODULUS:
+                    results = mathCore.Modulus(input_1, input_2);
+                    results = (int) (results);
                     break;
             }
 
