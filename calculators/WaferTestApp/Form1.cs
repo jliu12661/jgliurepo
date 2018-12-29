@@ -8,18 +8,11 @@ namespace WaferTestApp
 {
     public partial class Form1 : Form
     {
-        bool bRun;
-        SiteInfor[] siteList;
-
+        // color settings
         Color cSelect = Color.WhiteSmoke;
-        Color cUnSel = Color.DarkGray;
+        Color cUnSelect = Color.DarkGray;
         Color cPass = Color.LightGreen;
-        Color cFial = Color.LightSalmon;
-
-        Random random = new Random();
-
-        double regX;
-        double regY;
+        Color cFail = Color.LightSalmon;
 
         // Wafer Design Infor
         const double dX = 10;
@@ -27,19 +20,26 @@ namespace WaferTestApp
         const double DX = 70;
         const double DY = 120;
 
+        // other members
+        double regX;
+        double regY;
+        bool m_bRuning;
+        SiteInfor[] siteList;
+
         public Form1()
         {
             InitializeComponent();
 
             waferCtrl1.Enabled = false;
             waferCtrl1.toggleSelect = toggleSelected;
-            buttonAbort.Enabled = false;
 
-            // Init Registartion
-            regX = 100;
-            regY = 200;
+            InitializeSites();
+        }
 
-            // Init Sites and GUI
+        #region DetailImpl
+
+        void InitializeSites()
+        {
             siteList = new SiteInfor[132];
             int i = 0;
             foreach (var g in waferCtrl1.gbWafer.Controls)
@@ -50,9 +50,9 @@ namespace WaferTestApp
                 {
                     var sP = GetSitePosition(i);
                     TextBox tb = t as TextBox;
-                    tb.BackColor = cUnSel;
+                    tb.BackColor = cUnSelect;
                     var s = new SiteInfor()
-                    { Name = tb.Text, Id = i, Selected = false, State = STATE.UNTESTED};
+                    { Name = tb.Text, Id = i, Selected = false, State = STATE.UNTESTED };
                     s.X = gP.X + sP.X;
                     s.Y = gP.Y + sP.Y;
 
@@ -129,7 +129,7 @@ namespace WaferTestApp
                     if (s.State == STATE.UNTESTED)
                     {
                         s.Selected = false;
-                        tb.BackColor = cUnSel;
+                        tb.BackColor = cUnSelect;
                     }
                 }
             }
@@ -143,7 +143,7 @@ namespace WaferTestApp
                 if (s.State == STATE.UNTESTED)
                 {
                     s.Selected = !s.Selected;
-                    tb.BackColor = s.Selected ? cSelect : cUnSel;
+                    tb.BackColor = s.Selected ? cSelect : cUnSelect;
                 }
             }
         }
@@ -156,37 +156,26 @@ namespace WaferTestApp
         private async void buttonRun_Click(object sender, EventArgs e)
         {
             cbEnableSelect.Checked = false;
-            bRun = true;
+            m_bRuning = true;
 
             buttonRun.Enabled = false;
             buttonAbort.Enabled = true;
 
             foreach (var g in waferCtrl1.gbWafer.Controls)
             {
-                if (bRun)
+                if (m_bRuning)
                 {
                     GroupBox gb = g as GroupBox;
                     foreach (var t in gb.Controls)
                     {
-                        if (bRun)
+                        if (m_bRuning)
                         {
                             TextBox tb = t as TextBox;
                             SiteInfor s = tb.Tag as SiteInfor;
-                            if (bRun && s.Selected && s.State == STATE.UNTESTED)
+                            if (m_bRuning && s.Selected && s.State == STATE.UNTESTED)
                             {
-                                await Task.Run(() => MoveTo(s.X, s.Y));
-
-                                if (random.NextDouble() > 0.1)
-                                {
-                                    s.State = STATE.PASS;
-                                    tb.BackColor = cPass;
-                                }
-                                else
-                                {
-                                    s.State = STATE.FAIL;
-                                    tb.BackColor = cFial;
-                                }
-
+                                await Task.Run(() => MoveTo(s));
+                                tb.BackColor = s.State == STATE.PASS ? cPass : cFail;
                             }
                         }
                     }
@@ -199,13 +188,26 @@ namespace WaferTestApp
 
         private void buttonAbort_Click(object sender, EventArgs e)
         {
-            bRun = false;
+            m_bRuning = false;
         }
 
-        private void MoveTo(double x, double y)
+        #endregion
+
+        Random random = new Random();
+        private void MoveTo(SiteInfor s)
         {
-            Console.WriteLine($" x:{regX + x :G4}; y:{regY + y :G4}");
+            Console.WriteLine($" x:{regX + s.X :G4}; y:{regY + s.Y :G4}");
             Thread.Sleep(500);
+            s.State = random.NextDouble() > 0.2 ? STATE.PASS : STATE.FAIL;
+        }
+
+        private void buttonReg_Click(object sender, EventArgs e)
+        {
+            // Init Registartion
+            regX = 100;
+            regY = 200;
+
+            buttonRun.Enabled = true;
         }
     }
 }

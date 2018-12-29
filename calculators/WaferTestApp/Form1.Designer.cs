@@ -33,15 +33,17 @@
             this.buttonUnSelect = new System.Windows.Forms.Button();
             this.cbEnableSelect = new System.Windows.Forms.CheckBox();
             this.buttonAbort = new System.Windows.Forms.Button();
+            this.buttonReg = new System.Windows.Forms.Button();
             this.waferCtrl1 = new WaferCtrl.WaferCtrl();
             this.SuspendLayout();
             // 
             // buttonRun
             // 
-            this.buttonRun.Location = new System.Drawing.Point(494, 567);
+            this.buttonRun.Enabled = false;
+            this.buttonRun.Location = new System.Drawing.Point(570, 567);
             this.buttonRun.Name = "buttonRun";
-            this.buttonRun.Size = new System.Drawing.Size(109, 44);
-            this.buttonRun.TabIndex = 1;
+            this.buttonRun.Size = new System.Drawing.Size(80, 44);
+            this.buttonRun.TabIndex = 2;
             this.buttonRun.Text = "Run";
             this.buttonRun.UseVisualStyleBackColor = true;
             this.buttonRun.Click += new System.EventHandler(this.buttonRun_Click);
@@ -50,18 +52,18 @@
             // 
             this.buttonSelectAll.Location = new System.Drawing.Point(192, 567);
             this.buttonSelectAll.Name = "buttonSelectAll";
-            this.buttonSelectAll.Size = new System.Drawing.Size(109, 44);
-            this.buttonSelectAll.TabIndex = 2;
+            this.buttonSelectAll.Size = new System.Drawing.Size(80, 44);
+            this.buttonSelectAll.TabIndex = 0;
             this.buttonSelectAll.Text = "Select All";
             this.buttonSelectAll.UseVisualStyleBackColor = true;
             this.buttonSelectAll.Click += new System.EventHandler(this.buttonSelectAll_Click);
             // 
             // buttonUnSelect
             // 
-            this.buttonUnSelect.Location = new System.Drawing.Point(340, 567);
+            this.buttonUnSelect.Location = new System.Drawing.Point(297, 566);
             this.buttonUnSelect.Name = "buttonUnSelect";
-            this.buttonUnSelect.Size = new System.Drawing.Size(109, 44);
-            this.buttonUnSelect.TabIndex = 3;
+            this.buttonUnSelect.Size = new System.Drawing.Size(80, 44);
+            this.buttonUnSelect.TabIndex = 5;
             this.buttonUnSelect.Text = "DeSelect All";
             this.buttonUnSelect.UseVisualStyleBackColor = true;
             this.buttonUnSelect.Click += new System.EventHandler(this.buttonUnSelect_Click);
@@ -79,13 +81,24 @@
             // 
             // buttonAbort
             // 
-            this.buttonAbort.Location = new System.Drawing.Point(648, 566);
+            this.buttonAbort.Enabled = false;
+            this.buttonAbort.Location = new System.Drawing.Point(674, 566);
             this.buttonAbort.Name = "buttonAbort";
-            this.buttonAbort.Size = new System.Drawing.Size(109, 44);
-            this.buttonAbort.TabIndex = 5;
+            this.buttonAbort.Size = new System.Drawing.Size(80, 44);
+            this.buttonAbort.TabIndex = 3;
             this.buttonAbort.Text = "Abort Run";
             this.buttonAbort.UseVisualStyleBackColor = true;
             this.buttonAbort.Click += new System.EventHandler(this.buttonAbort_Click);
+            // 
+            // buttonReg
+            // 
+            this.buttonReg.Location = new System.Drawing.Point(466, 567);
+            this.buttonReg.Name = "buttonReg";
+            this.buttonReg.Size = new System.Drawing.Size(80, 44);
+            this.buttonReg.TabIndex = 1;
+            this.buttonReg.Text = "Set Origion";
+            this.buttonReg.UseVisualStyleBackColor = true;
+            this.buttonReg.Click += new System.EventHandler(this.buttonReg_Click);
             // 
             // waferCtrl1
             // 
@@ -93,13 +106,14 @@
             this.waferCtrl1.Location = new System.Drawing.Point(60, 41);
             this.waferCtrl1.Name = "waferCtrl1";
             this.waferCtrl1.Size = new System.Drawing.Size(697, 484);
-            this.waferCtrl1.TabIndex = 0;
+            this.waferCtrl1.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 652);
+            this.Controls.Add(this.buttonReg);
             this.Controls.Add(this.buttonAbort);
             this.Controls.Add(this.cbEnableSelect);
             this.Controls.Add(this.buttonUnSelect);
@@ -123,6 +137,7 @@
         private System.Windows.Forms.Button buttonUnSelect;
         private System.Windows.Forms.CheckBox cbEnableSelect;
         private System.Windows.Forms.Button buttonAbort;
+        private System.Windows.Forms.Button buttonReg;
     }
 }
 

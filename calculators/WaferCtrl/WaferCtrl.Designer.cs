@@ -219,7 +219,7 @@
             this.groupBox0.Controls.Add(this.textBox9);
             this.groupBox0.Controls.Add(this.textBox10);
             this.groupBox0.Controls.Add(this.textBox11);
-     ;
+    
             this.groupBox0.Location = new System.Drawing.Point(148, 19);
             this.groupBox0.Name = "groupBox0";
             this.groupBox0.Size = new System.Drawing.Size(112, 129);
