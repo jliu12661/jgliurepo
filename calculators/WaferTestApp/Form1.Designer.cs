@@ -1,0 +1,128 @@
+﻿namespace WaferTestApp
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.buttonRun = new System.Windows.Forms.Button();
+            this.buttonSelectAll = new System.Windows.Forms.Button();
+            this.buttonUnSelect = new System.Windows.Forms.Button();
+            this.cbEnableSelect = new System.Windows.Forms.CheckBox();
+            this.buttonAbort = new System.Windows.Forms.Button();
+            this.waferCtrl1 = new WaferCtrl.WaferCtrl();
+            this.SuspendLayout();
+            // 
+            // buttonRun
+            // 
+            this.buttonRun.Location = new System.Drawing.Point(494, 567);
+            this.buttonRun.Name = "buttonRun";
+            this.buttonRun.Size = new System.Drawing.Size(109, 44);
+            this.buttonRun.TabIndex = 1;
+            this.buttonRun.Text = "Run";
+            this.buttonRun.UseVisualStyleBackColor = true;
+            this.buttonRun.Click += new System.EventHandler(this.buttonRun_Click);
+            // 
+            // buttonSelectAll
+            // 
+            this.buttonSelectAll.Location = new System.Drawing.Point(192, 567);
+            this.buttonSelectAll.Name = "buttonSelectAll";
+            this.buttonSelectAll.Size = new System.Drawing.Size(109, 44);
+            this.buttonSelectAll.TabIndex = 2;
+            this.buttonSelectAll.Text = "Select All";
+            this.buttonSelectAll.UseVisualStyleBackColor = true;
+            this.buttonSelectAll.Click += new System.EventHandler(this.buttonSelectAll_Click);
+            // 
+            // buttonUnSelect
+            // 
+            this.buttonUnSelect.Location = new System.Drawing.Point(340, 567);
+            this.buttonUnSelect.Name = "buttonUnSelect";
+            this.buttonUnSelect.Size = new System.Drawing.Size(109, 44);
+            this.buttonUnSelect.TabIndex = 3;
+            this.buttonUnSelect.Text = "DeSelect All";
+            this.buttonUnSelect.UseVisualStyleBackColor = true;
+            this.buttonUnSelect.Click += new System.EventHandler(this.buttonUnSelect_Click);
+            // 
+            // cbEnableSelect
+            // 
+            this.cbEnableSelect.AutoSize = true;
+            this.cbEnableSelect.Location = new System.Drawing.Point(69, 581);
+            this.cbEnableSelect.Name = "cbEnableSelect";
+            this.cbEnableSelect.Size = new System.Drawing.Size(92, 17);
+            this.cbEnableSelect.TabIndex = 4;
+            this.cbEnableSelect.Text = "Enable Select";
+            this.cbEnableSelect.UseVisualStyleBackColor = true;
+            this.cbEnableSelect.CheckedChanged += new System.EventHandler(this.cbEnableSelect_CheckedChanged);
+            // 
+            // buttonAbort
+            // 
+            this.buttonAbort.Location = new System.Drawing.Point(648, 566);
+            this.buttonAbort.Name = "buttonAbort";
+            this.buttonAbort.Size = new System.Drawing.Size(109, 44);
+            this.buttonAbort.TabIndex = 5;
+            this.buttonAbort.Text = "Abort Run";
+            this.buttonAbort.UseVisualStyleBackColor = true;
+            this.buttonAbort.Click += new System.EventHandler(this.buttonAbort_Click);
+            // 
+            // waferCtrl1
+            // 
+            this.waferCtrl1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.waferCtrl1.Location = new System.Drawing.Point(60, 41);
+            this.waferCtrl1.Name = "waferCtrl1";
+            this.waferCtrl1.Size = new System.Drawing.Size(697, 484);
+            this.waferCtrl1.TabIndex = 0;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(804, 652);
+            this.Controls.Add(this.buttonAbort);
+            this.Controls.Add(this.cbEnableSelect);
+            this.Controls.Add(this.buttonUnSelect);
+            this.Controls.Add(this.buttonSelectAll);
+            this.Controls.Add(this.buttonRun);
+            this.Controls.Add(this.waferCtrl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.Name = "Form1";
+            this.Text = "XX Test";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private WaferCtrl.WaferCtrl waferCtrl1;
+        private System.Windows.Forms.Button buttonRun;
+        private System.Windows.Forms.Button buttonSelectAll;
+        private System.Windows.Forms.Button buttonUnSelect;
+        private System.Windows.Forms.CheckBox cbEnableSelect;
+        private System.Windows.Forms.Button buttonAbort;
+    }
+}
+
