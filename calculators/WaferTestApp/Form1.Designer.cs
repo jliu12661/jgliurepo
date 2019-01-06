@@ -35,12 +35,13 @@
             this.buttonAbort = new System.Windows.Forms.Button();
             this.buttonReg = new System.Windows.Forms.Button();
             this.waferCtrl1 = new WaferCtrl.WaferCtrl();
+            this.textBoxWaferId = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // buttonRun
             // 
             this.buttonRun.Enabled = false;
-            this.buttonRun.Location = new System.Drawing.Point(570, 567);
+            this.buttonRun.Location = new System.Drawing.Point(570, 751);
             this.buttonRun.Name = "buttonRun";
             this.buttonRun.Size = new System.Drawing.Size(80, 44);
             this.buttonRun.TabIndex = 2;
@@ -50,7 +51,7 @@
             // 
             // buttonSelectAll
             // 
-            this.buttonSelectAll.Location = new System.Drawing.Point(192, 567);
+            this.buttonSelectAll.Location = new System.Drawing.Point(192, 751);
             this.buttonSelectAll.Name = "buttonSelectAll";
             this.buttonSelectAll.Size = new System.Drawing.Size(80, 44);
             this.buttonSelectAll.TabIndex = 0;
@@ -60,7 +61,7 @@
             // 
             // buttonUnSelect
             // 
-            this.buttonUnSelect.Location = new System.Drawing.Point(297, 566);
+            this.buttonUnSelect.Location = new System.Drawing.Point(297, 750);
             this.buttonUnSelect.Name = "buttonUnSelect";
             this.buttonUnSelect.Size = new System.Drawing.Size(80, 44);
             this.buttonUnSelect.TabIndex = 5;
@@ -71,7 +72,7 @@
             // cbEnableSelect
             // 
             this.cbEnableSelect.AutoSize = true;
-            this.cbEnableSelect.Location = new System.Drawing.Point(69, 581);
+            this.cbEnableSelect.Location = new System.Drawing.Point(69, 765);
             this.cbEnableSelect.Name = "cbEnableSelect";
             this.cbEnableSelect.Size = new System.Drawing.Size(92, 17);
             this.cbEnableSelect.TabIndex = 4;
@@ -82,7 +83,7 @@
             // buttonAbort
             // 
             this.buttonAbort.Enabled = false;
-            this.buttonAbort.Location = new System.Drawing.Point(674, 566);
+            this.buttonAbort.Location = new System.Drawing.Point(674, 750);
             this.buttonAbort.Name = "buttonAbort";
             this.buttonAbort.Size = new System.Drawing.Size(80, 44);
             this.buttonAbort.TabIndex = 3;
@@ -92,7 +93,7 @@
             // 
             // buttonReg
             // 
-            this.buttonReg.Location = new System.Drawing.Point(466, 567);
+            this.buttonReg.Location = new System.Drawing.Point(466, 751);
             this.buttonReg.Name = "buttonReg";
             this.buttonReg.Size = new System.Drawing.Size(80, 44);
             this.buttonReg.TabIndex = 1;
@@ -105,14 +106,27 @@
             this.waferCtrl1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.waferCtrl1.Location = new System.Drawing.Point(60, 41);
             this.waferCtrl1.Name = "waferCtrl1";
-            this.waferCtrl1.Size = new System.Drawing.Size(697, 484);
+            this.waferCtrl1.Size = new System.Drawing.Size(694, 692);
             this.waferCtrl1.TabIndex = 6;
+            // 
+            // textBoxWaferId
+            // 
+            this.textBoxWaferId.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBoxWaferId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxWaferId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxWaferId.Location = new System.Drawing.Point(306, 118);
+            this.textBoxWaferId.Name = "textBoxWaferId";
+            this.textBoxWaferId.Size = new System.Drawing.Size(205, 17);
+            this.textBoxWaferId.TabIndex = 7;
+            this.textBoxWaferId.Text = "Enter the Wafer ID";
+            this.textBoxWaferId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 652);
+            this.ClientSize = new System.Drawing.Size(804, 839);
+            this.Controls.Add(this.textBoxWaferId);
             this.Controls.Add(this.buttonReg);
             this.Controls.Add(this.buttonAbort);
             this.Controls.Add(this.cbEnableSelect);
@@ -138,6 +152,7 @@
         private System.Windows.Forms.CheckBox cbEnableSelect;
         private System.Windows.Forms.Button buttonAbort;
         private System.Windows.Forms.Button buttonReg;
+        private System.Windows.Forms.TextBox textBoxWaferId;
     }
 }
 
